@@ -1,0 +1,10 @@
+docker -v
+
+docker build -t websimple .
+docker run -d --rm --name websimple_c -p 8080:80 websimple
+
+docker build -t api-students .
+docker run -d --rm --name api-students_c -p 8000:8000 api-students
+docker logs api-students_c
+docker exec -it api-students_c bash
+
