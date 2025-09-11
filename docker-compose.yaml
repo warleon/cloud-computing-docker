@@ -1,13 +1,16 @@
 services:
   api-students:
     build: ./api-students
+    image: justwarleon/api-students
     ports:
       - 8000:8000
   websimple:
     build: ./websimple
+    image: justwarleon/websimple
     ports:
       - 8080:80
   webplantilla:
     build: ./webplantilla
+    image: justwarleon/webplantilla
     ports:
       - 8081:80
